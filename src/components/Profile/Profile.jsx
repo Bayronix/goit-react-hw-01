@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Profile.module.css";
 
 export default function Profile({
   name,
@@ -8,25 +9,25 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div>
-      <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
+    <div className={styles.card}>
+      <div className={styles.options}>
+        <img className={styles.img} src={image} alt="User avatar" />
+        <p className={styles.text}>{name}</p>
+        <p className={styles.text}>{tag}</p>
+        <p className={styles.text}>{location}</p>
       </div>
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className={styles.ul}>
+        <li className={styles.li}>
+          <span className={styles.span}>Followers</span>
+          <span className={styles.span}>{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className={styles.li}>
+          <span className={styles.span}>Views</span>
+          <span className={styles.span}>{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className={styles.li}>
+          <span className={styles.span}>Likes</span>
+          <span className={styles.span}>{likes}</span>
         </li>
       </ul>
     </div>

@@ -1,0 +1,16 @@
+.table {
+  width: 1000px;
+  border-collapse: collapse;
+}
+
+.th,
+.td {
+  border: 2px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.th {
+  justify-content: center;
+  background-color: #f2f2f2;
+}

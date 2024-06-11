@@ -1,7 +1,9 @@
 import Profile from "./Profile/Profile";
 import userData from "./Profile/userData.json";
-import friendList from "./FriendList/FriendList.json";
-import FriendListItem from "./FriendList/FriendList";
+import friend from "./FriendList/FriendList.json";
+import transaction from "./TransactionHistory/transactionHistory.json";
+import FriendList from "./FriendList/FriendList";
+import TransactionHistory from "./TransactionHistory/TransactionHistory";
 
 const App = () => {
   return (
@@ -13,12 +15,10 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
-      <FriendListItem
-        avatar={friendList.avatar}
-        name={friendList.name}
-        isOnline={friendList.isOnline}
-        id={friendList.id}
-      />
+
+      <FriendList friend={friend} />
+
+      <TransactionHistory transaction={transaction} />
     </>
   );
 };

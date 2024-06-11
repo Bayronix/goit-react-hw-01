@@ -1,0 +1,43 @@
+/* styles.module.css */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  padding: 20px;
+  width: 250px; /* Adjust width as needed */
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.text {
+  margin: 5px 0;
+}
+
+.ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-bottom: 5px;
+}
+
+.span {
+  font-weight: bold;
+}
