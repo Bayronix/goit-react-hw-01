@@ -1,17 +1,17 @@
 import React from "react";
+import FriendListItem from "../FriendListItem/FriendListItem";
 import styles from "./FriendList.module.css";
 
-export default function FriendList({ friend }) {
+export default function FriendList({ friends }) {
   return (
     <div className={styles.friendList}>
-      {friend.map(({ id, avatar, name, isOnline }) => (
-        <div key={id} className={styles.friend}>
-          <img src={avatar} alt="Avatar" className={styles.avatar} />
-          <p className={styles.name}>{name}</p>
-          <p className={isOnline ? styles.online : styles.offline}>
-            {isOnline ? "Online" : "Offline"}
-          </p>
-        </div>
+      {friends.map((friend) => (
+        <FriendListItem
+          key={friend.id}
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
+        />
       ))}
     </div>
   );
